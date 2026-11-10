@@ -3,57 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Página personal de Ericka Pérez C.">
-  <meta name="theme-color" content="#f6f3ee">
-  <title>Ericka Pérez C. | Página personal</title>
+  <meta name="description" content="Conoce a Ericka Pérez C., sus intereses, proyectos e ideas.">
+  <meta name="theme-color" content="#fff8f8">
+  <title>Ericka Pérez C. | Mi espacio personal</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #242323;
-      --muted: #65615e;
-      --paper: #f6f3ee;
-      --card: #fffefa;
-      --accent: #7956a8;
-      --line: #e7e0d7;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --ink: #382d36;
+      --muted: #766a73;
+      --paper: #fff8f8;
+      --card: #fffefe;
+      --accent: #b65f83;
+      --accent-dark: #914462;
+      --rose: #f8e6ec;
+      --line: #f0dce4;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at 85% 4%, #f9e9ef 0, transparent 26rem), var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
     a { color: inherit; }
     .wrap { width: min(100% - 2rem, 1020px); margin-inline: auto; }
 
     header { padding: 1.25rem 0; }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .brand { font-weight: 750; text-decoration: none; letter-spacing: -.03em; }
-    nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    .brand { color: var(--accent-dark); font-family: Georgia, serif; font-size: 1.2rem; font-weight: 700; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 1.35rem; }
     nav a { color: var(--muted); font-size: .95rem; text-decoration: none; }
-    nav a:hover, nav a:focus-visible { color: var(--accent); }
+    nav a:hover, nav a:focus-visible { color: var(--accent-dark); }
 
-    main { padding: 3.5rem 0 5rem; }
-    .hero { display: grid; grid-template-columns: 1.4fr .6fr; align-items: center; gap: 3rem; padding: 3.5rem 0 5rem; }
-    .eyebrow { color: var(--accent); font-size: .85rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
-    h1 { max-width: 720px; margin: .6rem 0 1rem; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; letter-spacing: -.06em; }
+    main { padding: 2rem 0 5rem; }
+    .hero { display: grid; grid-template-columns: 1.4fr .6fr; align-items: center; gap: 3rem; padding: 3.5rem 0 4.5rem; }
+    .eyebrow { color: var(--accent-dark); font-size: .85rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { max-width: 720px; margin: .6rem 0 1rem; font-size: clamp(2.8rem, 7vw, 5.2rem); line-height: 1.05; letter-spacing: -.055em; }
     .lead { max-width: 620px; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
-    .button { display: inline-block; margin-top: 1rem; padding: .8rem 1.15rem; border-radius: 999px; background: var(--accent); color: white; font-weight: 700; text-decoration: none; }
-    .button:hover { background: #62428f; }
-    .portrait { display: grid; width: min(100%, 250px); aspect-ratio: 1; place-items: center; justify-self: center; border: 1px solid var(--line); border-radius: 50%; background: #e9e0f1; color: var(--accent); font-size: 4.5rem; font-weight: 800; }
+    .button { display: inline-block; margin-top: 1rem; padding: .8rem 1.25rem; border: 1px solid var(--accent); border-radius: 999px; background: var(--accent); color: white; font-weight: 700; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+    .button:hover { transform: translateY(-2px); background: var(--accent-dark); }
+    .portrait {
+      display: grid;
+      width: min(100%, 250px);
+      aspect-ratio: 1;
+      place-items: center;
+      justify-self: center;
+      border: 1px solid #e8c6d3;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #f8e4eb, #f5d6e1);
+      box-shadow: 0 18px 45px #a855741a;
+      color: var(--accent-dark);
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      font-style: italic;
+    }
 
     section { padding: 2rem 0; scroll-margin-top: 1rem; }
-    h2 { margin: 0 0 1rem; font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -.04em; }
+    h2 { margin: 0 0 1rem; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.035em; }
     .section-copy { max-width: 720px; color: var(--muted); }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-    .card { padding: 1.35rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--card); }
-    .card h3 { margin: 0 0 .45rem; }
+    .card { padding: 1.4rem; border: 1px solid var(--line); border-radius: 1.2rem; background: #fffdfd; box-shadow: 0 8px 26px #8e52600a; }
+    .card h3 { margin: 0 0 .45rem; color: var(--accent-dark); font-family: Georgia, serif; font-size: 1.25rem; }
     .card p { margin: 0; color: var(--muted); }
-    .contact { padding: 2rem; border-radius: 1.25rem; background: #ebe4f2; }
+    .contact { padding: 2rem; border: 1px solid var(--line); border-radius: 1.4rem; background: linear-gradient(135deg, #f9e8ee, #fff1f4); }
     .contact p { color: var(--muted); }
     footer { padding: 1.5rem 0 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 
     @media (max-width: 700px) {
-      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 0 3rem; }
-      .portrait { grid-row: 1; width: 150px; font-size: 3rem; }
+      .hero { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 0 3rem; }
+      .portrait { grid-row: 1; width: 155px; font-size: 3.5rem; }
       .cards { grid-template-columns: 1fr; }
       .nav { align-items: flex-start; flex-direction: column; }
       nav { gap: .9rem; }
@@ -61,6 +83,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
     }
   </style>
 </head>
@@ -70,7 +93,7 @@
       <a class="brand" href="#inicio">Ericka Pérez C.</a>
       <nav aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#intereses">Intereses</a>
+        <a href="#intereses">Mis gustos</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -79,50 +102,50 @@
   <main class="wrap" id="inicio">
     <section class="hero" aria-labelledby="titulo-principal">
       <div>
-        <p class="eyebrow">Hola, ¡bienvenida/o!</p>
-        <h1 id="titulo-principal">Soy Ericka Pérez C.</h1>
-        <p class="lead">Este es mi espacio personal en internet. Aquí compartiré un poco sobre mí, mis intereses y los proyectos que me entusiasman.</p>
-        <a class="button" href="#sobre-mi">Conóceme</a>
+        <p class="eyebrow">Un gusto tenerte por aquí</p>
+        <h1 id="titulo-principal">Hola, soy Ericka.</h1>
+        <p class="lead">Este es mi pequeño rincón en internet: un espacio para compartir quién soy, las cosas que me inspiran y los proyectos que voy creando con cariño.</p>
+        <a class="button" href="#sobre-mi">Conóceme un poquito</a>
       </div>
       <div class="portrait" aria-label="Inicial E">E</div>
     </section>
 
     <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
-      <h2 id="titulo-sobre-mi">Sobre mí</h2>
-      <p class="section-copy">¡Hola! Soy Ericka. Me interesa aprender, explorar nuevas ideas y trabajar en proyectos que me inspiren. Esta página es una pequeña presentación y un lugar para compartir lo que hago.</p>
+      <h2 id="titulo-sobre-mi">Un poquito sobre mí</h2>
+      <p class="section-copy">¡Hola! Soy Ericka Pérez C. Me encanta aprender, descubrir ideas nuevas y dar vida a proyectos que me emocionan. Aquí iré compartiendo un poquito de mi camino, mis intereses y todo aquello que me hace sonreír.</p>
     </section>
 
     <section id="intereses" aria-labelledby="titulo-intereses">
-      <h2 id="titulo-intereses">Lo que me gusta</h2>
-      <p class="section-copy">Algunas cosas que forman parte de mi mundo:</p>
+      <h2 id="titulo-intereses">Cosas que me inspiran</h2>
+      <p class="section-copy">Algunas de las cosas que disfruto y que llenan de color mis días:</p>
       <div class="cards">
         <article class="card">
-          <h3>Aprender</h3>
-          <p>Siempre hay algo nuevo por descubrir y una habilidad más por desarrollar.</p>
+          <h3>Aprender siempre</h3>
+          <p>Me emociona descubrir algo nuevo y crecer un poquito con cada experiencia.</p>
         </article>
         <article class="card">
-          <h3>Crear</h3>
-          <p>Disfruto convertir ideas en proyectos y darles mi propio toque.</p>
+          <h3>Crear con cariño</h3>
+          <p>Disfruto transformar ideas en proyectos y agregarles un toque muy mío.</p>
         </article>
         <article class="card">
-          <h3>Inspirarme</h3>
-          <p>Me gusta encontrar inspiración en las personas, los lugares y las experiencias cotidianas.</p>
+          <h3>Encontrar inspiración</h3>
+          <p>La encuentro en las personas, los lugares bonitos y los pequeños momentos cotidianos.</p>
         </article>
       </div>
     </section>
 
     <section id="contacto" aria-labelledby="titulo-contacto">
       <div class="contact">
-        <h2 id="titulo-contacto">¡Hablemos!</h2>
-        <p>¿Quieres saludar o compartir una idea? Escríbeme por correo.</p>
-        <!-- Reemplaza el correo de ejemplo por tu dirección antes de publicar. -->
-        <a class="button" href="mailto:tu-correo@ejemplo.com">Enviar un correo</a>
+        <h2 id="titulo-contacto">¿Nos ponemos en contacto?</h2>
+        <p>Me encantará recibir tu saludo o conocer tus ideas. Puedes escribirme por correo.</p>
+        <!-- Cambia el correo de ejemplo por tu dirección antes de compartir la página. -->
+        <a class="button" href="mailto:tu-correo@ejemplo.com">Escríbeme</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© <span id="year">2026</span> Ericka Pérez C. Hecho con cariño.</div>
+    <div class="wrap">© 2026 Ericka Pérez C. Hecho con cariño ♡</div>
   </footer>
 </body>
 </html>
